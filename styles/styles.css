@@ -1,0 +1,44 @@
+/* Color */
+/* Main Design */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__location {
+  flex-direction: row; /* a revoir */
+}
+
+/* Tuto */
+#tuto {
+  display: flex;
+  flex-direction: column;
+}
+#tuto__btn {
+  flex-direction: row;
+}
+
+/* Restauraunts */
+/* Footer */
+footer {
+  background-color: #353535;
+  width: 100%;
+}
+
+a img {
+  width: 100px;
+  height: 100px;
+}/*# sourceMappingURL=styles.css.map */
