@@ -3,10 +3,29 @@
 $c-primary: #9356DC;
 $c-secondary: #FF79DA;
 $c-tertiary: #99E2D0;
+$c-background: #F6F6F6;
+$c-highlight: #EAEAEA;
+$c-darken: #353535;
+
+/* Mixin */
+
+@mixin btn {
+    color: white;
+    height: 50px;
+    min-width: 180px;
+    padding: 0 1rem;
+    margin: 0;
+    background: linear-gradient($c-secondary, $c-primary);
+    border-radius: 25px;
+    border: none;
+}
 
 /* Main Design */
 
 * {
+    font-family: Roboto; 
+    font-size: 16px;
+    font-weight: 500;
     box-sizing: border-box;
 }
 
@@ -15,7 +34,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1440px;
     margin: 0;
 }
 
@@ -25,42 +43,185 @@ a {
 }
 
 ul {
-    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
 
 // Header
 
-.header__location {
-    flex-direction: row; /* a revoir */
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    .logo {
+        height: 3.5rem;
+        padding: 1rem 0 0.8rem 0;
+    }
+    .header__location {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 16px;
+        gap: 1rem;
+        color: $c-darken;
+        background-color: $c-highlight;
+        box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+            img {
+                height: 1rem;
+            }
+    }
 }
 
+/* Intro */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    background-color: $c-background;
+    z-index: 0;
+    width: 100%;
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            color: $c-darken;
+        }
+        .intro__btn {
+            @include btn;
+        }
+}
 
 /* Tuto */
 
-#tuto {
+.tuto {
     display: flex;
     flex-direction: column;
-        &__btn {
+    margin:  3rem 1.5rem;
+    gap: 1.5rem;
+        h2 {
+            margin-bottom: 1.5rem;
+        }   
+        .tuto__btn {
+            display: flex;
             flex-direction: row;
+            align-items: center;
+            background-color: $c-background;
+            border-radius: 20px;
+            height: 5rem;
+            gap: 1.5rem;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+            .btn__number {
+                color: white;
+                background-color: $c-primary;
+                font-size: 14px;
+                text-align: center;
+                height: 24px;
+                width: 24px;
+                border-radius: 24px;
+                margin-left: -12px;
+                padding: 4px;
+            }
         }
 }
 
 /* Restauraunts */
 
-#restauraunt {
-
+.restaurant {
+    width: 100%;
+    background-color: $c-background;
+    gap: 1rem;
+        h2 {
+            padding: 3rem 1.5rem 0 1.5rem;
+        }
+        .restaurant__menu {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            margin: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10); 
+            overflow: hidden;
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 190px;
+            }
+                .menu__content {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    padding: 1rem;
+                        .content__text {
+                            h3 {
+                                margin-bottom: 0.5rem;
+                            }
+                            p {
+                                font-weight: 300;
+                            }
+                        }
+                }
+                .menu__heart {
+                    margin: 0.5rem;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+        }
 }
 
 /* Footer */
 
 footer {
-    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    background-color: $c-darken;
     width: 100%;
+    padding:  1.5rem;
+    gap: 1rem;
+        li {
+            padding-bottom: 0.5rem;
+                a {
+                    color: white;
+                }
+                img {
+                    padding-right: 0.5rem;
+                }
+        }
 }
 
-
-// Affichage temporaire
-a img {
-    width: 100px;
-    height: 100px;
+h4 {
+    font-family: Shrikhand;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    color: white;
 }
