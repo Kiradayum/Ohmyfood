@@ -66,22 +66,32 @@ h3 {
     margin: 0;
 }
 
+h5 {
+    font-family: Shrikhand;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0;
+}
+
+h6 {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0;
+}
+
 p {
     margin: 0;
 }
 
 // Header
 
-header {
+.header__index {
     display: flex;
     flex-direction: column;
     width: 100%;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: 1;
-    .logo {
-        height: 3.5rem;
-        padding: 1rem 0 0.8rem 0;
-    }
     .header__location {
         display: flex;
         justify-content: center;
@@ -96,6 +106,11 @@ header {
                 height: 1rem;
             }
     }
+}
+
+.logo {
+    height: 3.5rem;
+    padding: 1rem 0 0.8rem 0;
 }
 
 /* Intro */
@@ -224,4 +239,86 @@ h4 {
     font-weight: 400;
     margin: 0;
     color: white;
+}
+
+/* Menus */
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+        a {
+           margin-right: auto;
+        }
+        .menu__arrow {
+            margin: 1rem;
+            width: 2rem;
+            height: 2rem;
+        }
+        .logo {
+            flex: 1;
+            text-align: center;
+            transform: translateX(-2rem);
+        }
+}
+
+.main__back {
+    margin: 0;
+    padding: 0;
+    .back__img {
+        width: 100%;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $c-background;
+    padding-bottom: 2rem;
+    gap: 2.5rem;
+    transform: translateY(-30px);
+    border-radius: 30px 30px 0 0;
+        .menu__title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 2rem 0 2rem;
+            padding: 2rem 0 0 0;
+        }
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem 0 1rem;
+    gap: 1rem;
+    .underline {
+        width: 2.5rem;
+        height: 3px;
+        background-color: $c-tertiary;
+        transform: translateY(0.3rem);
+    }
+    .dish__choice {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        gap: 0.3rem;
+        padding: 1rem;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+            .choice__content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                    #content__text {
+                        font-weight: 300;
+                    }
+                    #content__price {
+                        font-weight: 700;
+                    }
+            }
+    }
 }

@@ -45,22 +45,32 @@ h3 {
   margin: 0;
 }
 
+h5 {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 p {
   margin: 0;
 }
 
-header {
+.header__index {
   display: flex;
   flex-direction: column;
   width: 100%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
-header .logo {
-  height: 3.5rem;
-  padding: 1rem 0 0.8rem 0;
-}
-header .header__location {
+.header__index .header__location {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,8 +81,13 @@ header .header__location {
   background-color: #EAEAEA;
   box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
-header .header__location img {
+.header__index .header__location img {
   height: 1rem;
+}
+
+.logo {
+  height: 3.5rem;
+  padding: 1rem 0 0.8rem 0;
 }
 
 /* Intro */
@@ -203,4 +218,85 @@ h4 {
   font-weight: 400;
   margin: 0;
   color: white;
+}
+
+/* Menus */
+.header__menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.header__menu a {
+  margin-right: auto;
+}
+.header__menu .menu__arrow {
+  margin: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+.header__menu .logo {
+  flex: 1;
+  text-align: center;
+  transform: translateX(-2rem);
+}
+
+.main__back {
+  margin: 0;
+  padding: 0;
+}
+.main__back .back__img {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #F6F6F6;
+  padding-bottom: 2rem;
+  gap: 2.5rem;
+  transform: translateY(-30px);
+  border-radius: 30px 30px 0 0;
+}
+.menu .menu__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem 0 2rem;
+  padding: 2rem 0 0 0;
+}
+
+.dish {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 0 1rem;
+  gap: 1rem;
+}
+.dish .underline {
+  width: 2.5rem;
+  height: 3px;
+  background-color: #99E2D0;
+  transform: translateY(0.3rem);
+}
+.dish .dish__choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  gap: 0.3rem;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.dish .dish__choice .choice__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dish .dish__choice .choice__content #content__text {
+  font-weight: 300;
+}
+.dish .dish__choice .choice__content #content__price {
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */
