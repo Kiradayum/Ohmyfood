@@ -80,7 +80,7 @@ p {
   font-size: 16px;
   gap: 1rem;
   color: #353535;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .header__index .header__location img {
@@ -92,6 +92,11 @@ p {
   padding: 1rem 0 0.8rem 0;
 }
 
+/* Main */
+.main__restaurant {
+  width: 100%;
+}
+
 /* Intro */
 .intro {
   display: flex;
@@ -101,7 +106,7 @@ p {
   padding: 2rem;
   gap: 1rem;
   margin-bottom: 3rem;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   z-index: 0;
   width: 100%;
 }
@@ -116,7 +121,7 @@ p {
   min-width: 180px;
   padding: 0 1rem;
   margin: 0;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356dc);
   border-radius: 1.5rem;
   border: none;
 }
@@ -125,25 +130,30 @@ p {
 .tuto {
   display: flex;
   flex-direction: column;
-  margin: 3rem 1.5rem;
+  padding: 0 1.5rem;
+}
+.tuto .tuto__group {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
   gap: 1.5rem;
 }
-.tuto h2 {
+.tuto .tuto__group h2 {
   margin-bottom: 1.5rem;
 }
-.tuto .tuto__btn {
+.tuto .tuto__group .tuto__btn {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-radius: 20px;
   height: 5rem;
   gap: 1.5rem;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
 }
-.tuto .tuto__btn .btn__number {
+.tuto .tuto__group .tuto__btn .btn__number {
   color: white;
-  background-color: #9356DC;
+  background-color: #9356dc;
   font-size: 14px;
   text-align: center;
   height: 24px;
@@ -156,13 +166,13 @@ p {
 /* Restauraunts */
 .restaurant {
   width: 100%;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   gap: 1rem;
 }
 .restaurant h2 {
   padding: 3rem 1.5rem 0 1.5rem;
 }
-.restaurant .restaurant__menu {
+.restaurant .restaurant__group .restaurant__menu {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -171,25 +181,25 @@ p {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
-.restaurant .restaurant__menu img {
+.restaurant .restaurant__group .restaurant__menu img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 190px;
 }
-.restaurant .restaurant__menu .menu__content {
+.restaurant .restaurant__group .restaurant__menu .menu__content {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   padding: 1rem;
 }
-.restaurant .restaurant__menu .menu__content .content__text h3 {
+.restaurant .restaurant__group .restaurant__menu .menu__content .content__text h3 {
   margin-bottom: 0.5rem;
 }
-.restaurant .restaurant__menu .menu__content .content__text p {
+.restaurant .restaurant__group .restaurant__menu .menu__content .content__text p {
   font-weight: 300;
 }
-.restaurant .restaurant__menu .menu__heart {
+.restaurant .restaurant__group .restaurant__menu .menu__heart {
   margin: 0.5rem;
   width: 1.5rem;
   height: 1.5rem;
@@ -223,8 +233,8 @@ h4 {
 }
 
 /* Menus */
-.main__back {
-  background-color: #F6F6F6;
+.main__menu {
+  background-color: #f6f6f6;
 }
 
 .header__menu {
@@ -258,7 +268,7 @@ h4 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   gap: 2.5rem;
   border-radius: 30px 30px 0 0;
   z-index: 1;
@@ -283,7 +293,7 @@ h4 {
 .dish .underline {
   width: 2.5rem;
   height: 3px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   transform: translateY(0.3rem);
 }
 .dish .dish__choice {
@@ -318,7 +328,72 @@ h4 {
   min-width: 180px;
   padding: 0 1rem;
   margin: 0;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356dc);
   border-radius: 1.5rem;
   border: none;
+}
+
+/* Desktop */
+@media screen and (min-width: 761px) {
+  h1 {
+    font-size: 40px;
+  }
+  .tuto {
+    margin: auto;
+    max-width: 1440px;
+  }
+  .tuto h2 {
+    align-self: flex-start;
+  }
+  .tuto .tuto__group {
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+  }
+  .tuto .tuto__btn {
+    width: 33%;
+    flex: 1;
+  }
+  .restaurant h2 {
+    margin: auto;
+    padding-bottom: 3rem;
+    max-width: 1440px;
+  }
+  .restaurant .restaurant__group {
+    margin: auto;
+    max-width: 1440px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .restaurant .restaurant__group .restaurant__menu {
+    width: 43%;
+  }
+  footer {
+    flex-direction: row-reverse;
+    gap: 5rem;
+  }
+  footer ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1.5rem 0 0 0;
+  }
+  footer h4 {
+    padding: 1.5rem 1.5rem 0 0;
+  }
+  /* Menus */
+  .main__menu {
+    width: 100%;
+    background-color: white;
+  }
+  .main__back {
+    width: 100%;
+    height: 400px;
+  }
+  .menu {
+    margin: auto;
+    max-width: 1055px;
+  }
 }/*# sourceMappingURL=styles.css.map */
