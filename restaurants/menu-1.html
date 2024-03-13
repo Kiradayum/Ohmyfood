@@ -13,6 +13,9 @@
         <link rel="icon" href="../images/icons/favicon.png" type="image/svg+xml">
 	</head>
 	<body>
+		<div class="loader">
+			<div class="loader__animation"></div>
+		</div>
 		<header class="header__menu">
 			<a href="../index.html"><img src="../images/icons/back.svg" alt="back arrow" class="menu__arrow" /></a>
 			<img src="../images/logo/ohmyfood@2x.svg" alt="Ohmyfood" class="logo" />
@@ -38,8 +41,8 @@
 						<div class="choice">
                             <h3>Fricassée d'escargots</h3>
 							<div class="choice__content">
-								<p id="content__text">Au piment d'Espelette</p>
-								<p id="content__price">25€</p>
+								<p class="content__text">Au piment d'Espelette</p>
+								<p class="content__price">25€</p>
 							</div>
 						</div>
                         <div class="choice__check">
@@ -48,10 +51,10 @@
 					</div>
 					<div class="dish__choice">
 						<div class="choice">
-                            <h3>Fricassée d'escargots</h3>
+                            <h3>Foie gras de canard mi-cuit</h3>
 							<div class="choice__content">
-								<p id="content__text">Au piment d'Espelette</p>
-								<p id="content__price">25€</p>
+								<p class="content__text">Et ses copeaux de truffe noire</p>
+								<p class="content__price">35€</p>
 							</div>
 						</div>
                         <div class="choice__check">
@@ -60,10 +63,10 @@
 					</div>
 					<div class="dish__choice">
 						<div class="choice">
-                            <h3>Fricassée d'escargots</h3>
+                            <h3>Œuf au plat</h3>
 							<div class="choice__content">
-								<p id="content__text">Au piment d'Espelette</p>
-								<p id="content__price">25€</p>
+								<p class="content__text">Assaisonné à la truffe sur lit de caviar</p>
+								<p class="content__price">20€</p>
 							</div>
 						</div>
                         <div class="choice__check">
@@ -78,10 +81,10 @@
 					</div>
 					<div class="dish__choice">
 						<div class="choice">
-                            <h3>Fricassée d'escargots</h3>
+                            <h3>Filet de bœuf aux herbes</h3>
 							<div class="choice__content">
-								<p id="content__text">Au piment d'Espelette</p>
-								<p id="content__price">25€</p>
+								<p class="content__text">Accompagné de sa ribambelle de légumes</p>
+								<p class="content__price">40€</p>
 							</div>
 						</div>
                         <div class="choice__check">
@@ -90,10 +93,10 @@
 					</div>
 					<div class="dish__choice">
 						<div class="choice">
-                            <h3>Fricassée d'escargots</h3>
+                            <h3>Parmentier de queue de bœuf</h3>
 							<div class="choice__content">
-								<p id="content__text">Au piment d'Espelette</p>
-								<p id="content__price">25€</p>
+								<p class="content__text">À la truffe noire sur sa purée de panais</p>
+								<p class="content__price">35€</p>
 							</div>
 						</div>
                         <div class="choice__check">
@@ -102,10 +105,10 @@
 					</div>
 					<div class="dish__choice">
 						<div class="choice">
-                            <h3>Fricassée d'escargots</h3>
+                            <h3>Filets de turbo</h3>
 							<div class="choice__content">
-								<p id="content__text">Au piment d'Espelette</p>
-								<p id="content__price">25€</p>
+								<p class="content__text">Aux agrumes</p>
+								<p class="content__price">44€</p>
 							</div>
 						</div>
                         <div class="choice__check">
@@ -120,10 +123,10 @@
 					</div>
 					<div class="dish__choice">
 						<div class="choice">
-                            <h3>Fricassée d'escargots</h3>
+                            <h3>Paris-Brest</h3>
 							<div class="choice__content">
-								<p id="content__text">Au piment d'Espelette</p>
-								<p id="content__price">25€</p>
+								<p class="content__text">Revisité</p>
+								<p class="content__price">18€</p>
 							</div>
 						</div>
                         <div class="choice__check">
@@ -132,10 +135,10 @@
 					</div>
 					<div class="dish__choice">
 						<div class="choice">
-                            <h3>Fricassée d'escargots</h3>
+                            <h3>Macaron au chocolat d'exception </h3>
 							<div class="choice__content">
-								<p id="content__text">Au piment d'Espelette</p>
-								<p id="content__price">25€</p>
+								<p class="content__text">Et glace à la vanille de Madagascar</p>
+								<p class="content__price">22€</p>
 							</div>
 						</div>
                         <div class="choice__check">
@@ -144,10 +147,10 @@
 					</div>
 					<div class="dish__choice">
 						<div class="choice">
-                            <h3>Fricassée d'escargots</h3>
+                            <h3>Mousse au chocolat</h3>
 							<div class="choice__content">
-								<p id="content__text">Au piment d'Espelette</p>
-								<p id="content__price">25€</p>
+								<p class="content__text">Au piment d'Espelette et à la truffe noire</p>
+								<p class="content__price">23€</p>
 							</div>
 						</div>
                         <div class="choice__check">
@@ -155,7 +158,7 @@
                         </div>
 					</div>
 				</div>
-				<a href="#"><button class="command__btn">Commander</button></a>
+				<a href="#"><div class="command__btn">Commander</div></a>
 			</section>
 		</main>
 		<footer>
@@ -169,7 +172,7 @@
 						<a href="#"><img src="../images/icons/handshake.svg" alt="handshake" />Devenir partenaire</a>
 					</li>
 					<li><a href="#">Mentions légales</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="mailto:ohmyfood@exemple.fr">Contact</a></li>
 				</ul>
 			</nav>
 		</footer>

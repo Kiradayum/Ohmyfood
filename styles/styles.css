@@ -160,12 +160,16 @@ p {
   color: #353535;
 }
 .intro .intro__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   height: 3rem;
   min-width: 180px;
   padding: 0 1rem;
   margin: 0;
   background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border-radius: 1.5rem;
   border: none;
   cursor: pointer;
@@ -174,15 +178,17 @@ p {
 .intro .intro__btn::before {
   content: "";
   position: absolute;
+  border-radius: 1.5rem;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0);
-  transition: background-color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .intro .intro__btn:hover::before {
   background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 /* Tuto */
@@ -278,7 +284,7 @@ p {
   width: 2rem;
 }
 #restaurant .restaurant__group .restaurant__menu .menu__heart-container:hover > .menu__heart__full {
-  transform: scale(100%);
+  transform: scale(1);
 }
 #restaurant .restaurant__group .restaurant__menu .menu__heart-container .menu__heart {
   position: absolute;
@@ -286,7 +292,7 @@ p {
 #restaurant .restaurant__group .restaurant__menu .menu__heart-container .menu__heart__full {
   position: absolute;
   transition: transform 0.2s ease-in-out;
-  transform: scale(0%);
+  transform: scale(0);
 }
 #restaurant .restaurant__group .restaurant__menu .menu__heart-container .menu__heart {
   height: 1.5rem;
@@ -335,12 +341,16 @@ h4 {
 }
 .main__menu a .command__btn {
   width: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   height: 3rem;
   min-width: 180px;
   padding: 0 1rem;
   margin: 0;
   background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border-radius: 1.5rem;
   border: none;
   cursor: pointer;
@@ -349,15 +359,17 @@ h4 {
 .main__menu a .command__btn::before {
   content: "";
   position: absolute;
+  border-radius: 1.5rem;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0);
-  transition: background-color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .main__menu a .command__btn:hover::before {
   background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .header__menu {
@@ -427,7 +439,7 @@ h4 {
   width: 2.5rem;
 }
 .menu .menu__title .menu__heart-container:hover > .menu__heart__full {
-  transform: scale(100%);
+  transform: scale(1);
 }
 .menu .menu__title .menu__heart-container .menu__heart {
   position: absolute;
@@ -435,7 +447,7 @@ h4 {
 .menu .menu__title .menu__heart-container .menu__heart__full {
   position: absolute;
   transition: transform 0.2s ease-in-out;
-  transform: scale(0%);
+  transform: scale(0);
 }
 .menu .menu__title .menu__heart {
   height: 2rem;
@@ -487,14 +499,13 @@ h4 {
   justify-content: space-between;
   padding: 0 1rem 0 1rem;
 }
-.dish .dish__choice .choice #content__text {
+.dish .dish__choice .choice .content__text {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   font-weight: 300;
 }
-.dish .dish__choice .choice #content__price {
-  overflow: none;
+.dish .dish__choice .choice .content__price {
   font-weight: 700;
 }
 .dish .dish__choice .choice__check {
