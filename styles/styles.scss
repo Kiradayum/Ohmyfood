@@ -148,7 +148,7 @@ p {
 		border-radius: 50%;
 		width: 10rem;
 		height: 10rem;
-		animation: spin 1s ease-in-out infinite alternate-reverse;
+		animation: spin 1s ease-in-out 2 alternate-reverse;
 		z-index: 10;
 	}
 }
@@ -512,6 +512,35 @@ h4 {
 		}
 	}
 }
+
+/* Animation Menus */
+
+.starter {
+	animation: apparition 1s ease-in-out 1s forwards;
+	opacity: 0%;
+}
+
+.principal {
+	animation: apparition 1s ease-in-out 2s forwards;
+	opacity: 0%;
+}
+
+.dessert {
+	animation: apparition 1s ease-in-out 3s forwards;
+	opacity: 0%;
+}
+
+@keyframes apparition {
+	0% {
+		opacity: 0%;
+		transform: translateY(-2rem);
+	}
+	100% {
+		opacity: 100%;
+		transform: translateY(0);
+	}
+}
+
 
 /* Desktop */
 
