@@ -1,0 +1,51 @@
+/* Styles and animations */
+
+@mixin btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	height: 3rem;
+	min-width: 180px;
+	padding: 0 1rem;
+	margin: 0;
+	background: linear-gradient($c-secondary, $c-primary);
+	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
+	border-radius: 1.5rem;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		border-radius: 1.5rem;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0);
+		transition: all 0.3s ease-in-out;
+	}
+	&:hover::before {
+		background-color: rgba(255, 255, 255, 0.25);
+		box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+	}
+}
+
+@mixin heart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	&:hover > .menu__heart__full {
+		transform: scale(1);
+	}
+	.menu__heart {
+		position: absolute;
+	}
+	.menu__heart__full {
+		position: absolute;
+		transition: transform 0.2s ease-in-out;
+		transform: scale(0);
+	}
+}

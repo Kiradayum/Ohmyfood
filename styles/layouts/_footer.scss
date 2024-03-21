@@ -1,0 +1,43 @@
+footer {
+	display: flex;
+	flex-direction: column;
+	background-color: $c-darken;
+	width: 100%;
+	padding: 1.5rem;
+	gap: 1rem;
+	li {
+		padding-bottom: 0.5rem;
+		a {
+			color: white;
+		}
+		img {
+			padding-right: 0.5rem;
+		}
+	}
+}
+
+h4 {
+	font-family: Shrikhand;
+	font-size: 18px;
+	font-weight: 400;
+	margin: 0;
+	color: white;
+}
+
+@media screen and (min-width: 761px) {
+
+footer {
+	flex-direction: row-reverse;
+	gap: 5rem;
+	ul {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		gap: 1rem;
+		padding: 1.5rem 0 0 0;
+	}
+	h4 {
+		padding: 1.5rem 1.5rem 0 0;
+	}
+}
+}
